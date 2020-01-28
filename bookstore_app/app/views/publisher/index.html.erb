@@ -1,0 +1,17 @@
+<div class="container">
+<h2> publisher </h2>
+<table border="1" class="table">
+<tr>
+<th> Publisher Name</th>
+<th> Country </th>
+</tr>
+<% @publishers.each do |publisher| %>
+<tr>
+<td> <%= publisher.name %> </td>
+<td> <%= publisher.country %> </td>
+
+</tr>
+
+<% end %>
+</table>
+</div>

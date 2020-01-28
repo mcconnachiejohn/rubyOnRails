@@ -1,0 +1,24 @@
+<div class="container">
+<h2> Books Available </h2>
+<table border="1" class="table">
+<tr>
+<th> fname</th>
+<th> lname</th>
+<th> bio</th>
+</tr>
+<% @authors.each do |author| %>
+<tr>
+<td> <%= author.fname %> </td>
+<td> <%= author.lname %> </td>
+<td> <%= author.bio %> </td>
+
+
+</tr>
+
+<% end %>
+</table>
+</div>
+
+
+
+

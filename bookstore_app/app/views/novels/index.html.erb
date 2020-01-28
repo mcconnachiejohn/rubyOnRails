@@ -1,0 +1,31 @@
+<div class="container">
+<h2> Books Available </h2>
+<table border="1" class="table">
+<tr>
+<th> Novel Name</th>
+<th> isbn</th>
+<th> price</th>
+<th> Publication </th>
+<th> format</th>
+<th> pages</th>
+<th> description</th></tr>
+<% @novels.each do |novel| %>
+<tr>
+<td> <%= novel.name %> </td>
+<td> <%= novel.isbn %> </td>
+<td> <%= novel.price %> </td>
+<td> <%= novel.publication %> </td>
+<td> <%= novel.format %> </td>
+<td> <%= novel.pages %> </td>
+<td> <%= novel.description %> </td>
+
+<td> <%= link_to 'Book Page', book_path(book) %> </td>
+</tr>
+
+<% end %>
+</table>
+</div>
+
+
+
+
