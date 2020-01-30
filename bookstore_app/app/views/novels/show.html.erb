@@ -1,0 +1,31 @@
+<div class="container">
+<h3>novel Details</h3>
+
+
+<h1>  name :<%= @novel.name %> </h1>
+<h1> isbn : <%= @novel.isbn %> </h1>
+<h1> price: <%= @novel.price %> </h1>
+<h1> publication: <%= @novel.publication %> </h1>
+<h1>  format: <%= @novel.pages %> </h1>
+<h1> description: <%= @novel.description %> </h1>
+<h1> author_id:  <%= @novel.author_id %> </h1>
+<h1> <%= link_to 'author', authors_path(@novel.author_id) %> </h1>
+
+<h1> <%= link_to 'Genre', genres_path(@novel.genre_id) %> </h1>
+
+
+<h1> publisher id <%= @novel.publisher_id %> </h1>
+
+<h1> <%= link_to 'Novel', novels_path(@novel) %> </h1>
+
+
+
+<h1> <%= link_to 'Edit', edit_novel_path(@novel) %> </h1>
+<h1> <%= link_to 'Delete', '#' %> </h1>
+
+
+</div>
+
+
+
+

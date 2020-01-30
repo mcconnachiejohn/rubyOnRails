@@ -1,5 +1,5 @@
 <div class="container">
-<h2> Books Available </h2>
+<h2> NOVEL </h2>
 <table border="1" class="table">
 <tr>
 <th> Novel Name</th>
@@ -8,7 +8,14 @@
 <th> Publication </th>
 <th> format</th>
 <th> pages</th>
-<th> description</th></tr>
+<th> description</th>
+<th> author id </th>
+<th> genre id </th>
+<th> publisher id </th>
+<th> details </th>
+<th> edit </th>
+<th> delete </th>
+</tr>
 <% @novels.each do |novel| %>
 <tr>
 <td> <%= novel.name %> </td>
@@ -18,8 +25,20 @@
 <td> <%= novel.format %> </td>
 <td> <%= novel.pages %> </td>
 <td> <%= novel.description %> </td>
+<td> <%= novel.author_id %> </td>
+<td> <%= novel.genre_id %> </td>
+<td> <%= novel.publisher_id %> </td>
 
-<td> <%= link_to 'Book Page', book_path(book) %> </td>
+<td> <%= link_to 'Novel', novels_path(novel) %> </td>
+
+
+
+<td> <%= link_to 'Edit', edit_novel_path(novel) %> </td>
+<td> <%= link_to 'Delete', novel_path(novel),
+method: :Delete,
+data: {confirm: "Are you sure you want to delete details"}
+%> </td>
+
 </tr>
 
 <% end %>
